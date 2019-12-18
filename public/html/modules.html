@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>learner.base &mdash; learner 0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Quick Start" href="tutorials/quick-start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> learner
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basic Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Why this project?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#happy-learning">Happy learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#explore-this-package">Explore this package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/quick-start.html">Quick Start</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><cite>learner.base</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-learner.callbacks"><cite>learner.callbacks</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-learner.data"><cite>learner.data</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-learner.device"><cite>learner.device</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-learner.metrics"><cite>learner.metrics</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-learner.trainer"><cite>learner.trainer</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#subpackage-models">Subpackage: <cite>models</cite></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-learner.models.ae">module: <cite>models.ae</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-learner.models.vision">module: <cite>models.vision</cite></a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">learner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><cite>learner.base</cite></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-learner.base">
+<span id="learner-base"></span><h1><cite>learner.base</cite><a class="headerlink" href="#module-learner.base" title="Permalink to this headline">¶</a></h1>
+<p>Define the learners</p>
+<dl class="class">
+<dt id="learner.base.BaseLearner">
+<em class="property">class </em><code class="sig-prename descclassname">learner.base.</code><code class="sig-name descname">BaseLearner</code><a class="reference internal" href="_modules/learner/base.html#BaseLearner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.base.BaseLearner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>The base Class of all the learners</p>
+<dl class="method">
+<dt id="learner.base.BaseLearner.demory">
+<em class="property">property </em><code class="sig-name descname">demory</code><a class="headerlink" href="#learner.base.BaseLearner.demory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Memory of all the data that have been added</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="learner.base.BaseLearner.models">
+<em class="property">property </em><code class="sig-name descname">models</code><a class="headerlink" href="#learner.base.BaseLearner.models" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of all the models that have been added</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="learner.base.Learner">
+<em class="property">class </em><code class="sig-prename descclassname">learner.base.</code><code class="sig-name descname">Learner</code><a class="reference internal" href="_modules/learner/base.html#Learner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.base.Learner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#learner.base.BaseLearner" title="learner.base.BaseLearner"><code class="xref py py-class docutils literal notranslate"><span class="pre">learner.base.BaseLearner</span></code></a></p>
+<p>A typical Leaner with reasonable default settings</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-learner.callbacks">
+<span id="learner-callbacks"></span><h1><cite>learner.callbacks</cite><a class="headerlink" href="#module-learner.callbacks" title="Permalink to this headline">¶</a></h1>
+<p>The Callback system</p>
+<dl class="class">
+<dt id="learner.callbacks.CallBack">
+<em class="property">class </em><code class="sig-prename descclassname">learner.callbacks.</code><code class="sig-name descname">CallBack</code><a class="reference internal" href="_modules/learner/callbacks.html#CallBack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.callbacks.CallBack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base Class for all the callbacks</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-learner.data">
+<span id="learner-data"></span><h1><cite>learner.data</cite><a class="headerlink" href="#module-learner.data" title="Permalink to this headline">¶</a></h1>
+<p>Define the Classes for Data</p>
+<dl class="class">
+<dt id="learner.data.Data">
+<em class="property">class </em><code class="sig-prename descclassname">learner.data.</code><code class="sig-name descname">Data</code><span class="sig-paren">(</span><em class="sig-param">ds: torch.utils.data.dataset.Dataset</em>, <em class="sig-param">valid_ds: torch.utils.data.dataset.Dataset = None</em>, <em class="sig-param">test_ds: torch.utils.data.dataset.Dataset = None</em>, <em class="sig-param">auto_split: bool = False</em>, <em class="sig-param">split_ratio: float = 0.2</em>, <em class="sig-param">train_dl_kwargs: dict = None</em>, <em class="sig-param">valid_dl_kwargs: dict = None</em>, <em class="sig-param">test_dl_kwargs: dict = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/data.html#Data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.data.Data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Simple Class to wrap the datasets for machine learning tasks</p>
+<p>Use this Class to create a Data instance for leaner to learn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds</strong> (<em>Dataset</em>) – a PyTorch Dataset for training and / or validation</p></li>
+<li><p><strong>valid_ds</strong> (<em>Dataset</em>) – a PyTorch Dataset for validation, optional</p></li>
+<li><p><strong>test_ds</strong> (<em>Dataset</em>) – a PyTorch Dataset for testing, optional</p></li>
+<li><p><strong>auto_split</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – if True and <cite>valid_ds</cite> is None, then create a valid set from <cite>ds</cite></p></li>
+<li><p><strong>split_ratio</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – split ratio for the valid set, must between 0 and 1</p></li>
+<li><p><strong>train_dl_kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – optional arguments for creating train dataloader</p></li>
+<li><p><strong>valid_dl_kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – optional arguments for creating valid dataloader</p></li>
+<li><p><strong>test_dl_kwargs</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – optional arguments for creating test dataloader</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-learner.device">
+<span id="learner-device"></span><h1><cite>learner.device</cite><a class="headerlink" href="#module-learner.device" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="learner.device.get_available_memory">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_available_memory</code><span class="sig-paren">(</span><em class="sig-param">return_bytes=True</em>, <em class="sig-param">echo=True</em>, <em class="sig-param">human_readable=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_available_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_available_memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the available memory of current machine</p>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_cpu_count">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_cpu_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_cpu_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_cpu_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of available cpus</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_device">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_device</code><span class="sig-paren">(</span><em class="sig-param">use_gpu=True</em>, <em class="sig-param">gpu_idx=None</em>, <em class="sig-param">return_str=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <cite>torch.device(‘cuda:idx’)</cite> if <cite>use_gpu</cite> and cuda is available else <cite>torch.device(‘cpu’)</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>use_gpu</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – if True, try to detect if GPU is available</p></li>
+<li><p><strong>gpu_idx</strong> (<em>gpu_idx</em>) – if provided, must be a non-negative integer less than the number of GPUs</p></li>
+<li><p><strong>return_str</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – if True, return a string of the device, otherwise return a <cite>torch.device</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> or <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_free_memory">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_free_memory</code><span class="sig-paren">(</span><em class="sig-param">return_bytes=True</em>, <em class="sig-param">echo=True</em>, <em class="sig-param">human_readable=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_free_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_free_memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the free memory of current machine</p>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_gpu_count">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_gpu_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_gpu_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_gpu_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of available cpus</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_gpu_info">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_gpu_info</code><span class="sig-paren">(</span><em class="sig-param">return_info=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_gpu_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_gpu_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show and optionally return the inforamtion of available GPUs</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_memory_info">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_memory_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_memory_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_memory_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the memory usage information</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.device.get_total_memory">
+<code class="sig-prename descclassname">learner.device.</code><code class="sig-name descname">get_total_memory</code><span class="sig-paren">(</span><em class="sig-param">return_bytes=True</em>, <em class="sig-param">echo=True</em>, <em class="sig-param">human_readable=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/device.html#get_total_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.device.get_total_memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the total memory of current machine</p>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-learner.metrics">
+<span id="learner-metrics"></span><h1><cite>learner.metrics</cite><a class="headerlink" href="#module-learner.metrics" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="learner.metrics.binary_accuracy">
+<code class="sig-prename descclassname">learner.metrics.</code><code class="sig-name descname">binary_accuracy</code><span class="sig-paren">(</span><em class="sig-param">y_true</em>, <em class="sig-param">y_pred</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/metrics.html#binary_accuracy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.metrics.binary_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate binary accuracy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>torch.Tensor</em>) – actual labels</p></li>
+<li><p><strong>y_pred</strong> (<em>torch.Tensor</em>) – predict labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>accuracy value between the predictions and actual values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="learner.metrics.categorical_accuracy">
+<code class="sig-prename descclassname">learner.metrics.</code><code class="sig-name descname">categorical_accuracy</code><span class="sig-paren">(</span><em class="sig-param">y_true</em>, <em class="sig-param">y_pred</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/metrics.html#categorical_accuracy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.metrics.categorical_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the categorical accuracy for multi-class problems</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>torch.Tensor</em>) – actual labels</p></li>
+<li><p><strong>y_pred</strong> (<em>torch.Tensor</em>) – predict labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>accuracy value between the predictions and actual values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(in Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-learner.trainer">
+<span id="learner-trainer"></span><h1><cite>learner.trainer</cite><a class="headerlink" href="#module-learner.trainer" title="Permalink to this headline">¶</a></h1>
+<p>Trainer can help the leaner to update model based on data</p>
+<dl class="class">
+<dt id="learner.trainer.SGDTrainer">
+<em class="property">class </em><code class="sig-prename descclassname">learner.trainer.</code><code class="sig-name descname">SGDTrainer</code><span class="sig-paren">(</span><em class="sig-param">criterion=None</em>, <em class="sig-param">optimizer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/trainer.html#SGDTrainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.trainer.SGDTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#learner.trainer.Trainer" title="learner.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">learner.trainer.Trainer</span></code></a></p>
+<p>A general trainer based on SGD</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="learner.trainer.TrainHistory">
+<em class="property">class </em><code class="sig-prename descclassname">learner.trainer.</code><code class="sig-name descname">TrainHistory</code><a class="reference internal" href="_modules/learner/trainer.html#TrainHistory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.trainer.TrainHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Train history of a Neural Network Model</p>
+<dl class="method">
+<dt id="learner.trainer.TrainHistory.epoches">
+<em class="property">property </em><code class="sig-name descname">epoches</code><a class="headerlink" href="#learner.trainer.TrainHistory.epoches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of stored epoches</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="learner.trainer.TrainHistory.history">
+<em class="property">property </em><code class="sig-name descname">history</code><a class="headerlink" href="#learner.trainer.TrainHistory.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the history in pandas.DataFrame format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="learner.trainer.TrainHistory.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/trainer.html#TrainHistory.is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.trainer.TrainHistory.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if it’s an empty History object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="learner.trainer.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">learner.trainer.</code><code class="sig-name descname">Trainer</code><a class="reference internal" href="_modules/learner/trainer.html#Trainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.trainer.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base Class for Trainer</p>
+</dd></dl>
+
+</div>
+<div class="section" id="subpackage-models">
+<h1>Subpackage: <cite>models</cite><a class="headerlink" href="#subpackage-models" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-learner.models.ae">
+<span id="module-models-ae"></span><h2>module: <cite>models.ae</cite><a class="headerlink" href="#module-learner.models.ae" title="Permalink to this headline">¶</a></h2>
+<p>AutoEncoders</p>
+<dl class="class">
+<dt id="learner.models.ae.AutoEncoder">
+<em class="property">class </em><code class="sig-prename descclassname">learner.models.ae.</code><code class="sig-name descname">AutoEncoder</code><span class="sig-paren">(</span><em class="sig-param">in_dim</em>, <em class="sig-param">hidden_dims</em>, <em class="sig-param">actn: Callable = ReLU()</em>, <em class="sig-param">out_actn_encode=None</em>, <em class="sig-param">out_actn_decode=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/models/ae.html#AutoEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.models.ae.AutoEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>A simple AutoEncoder Class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_dim</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – number of features for the input data</p></li>
+<li><p><strong>hidden_dims</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – a list of numbers for hidden layers where last element will be the encoded dimension</p></li>
+<li><p><strong>actn</strong> (<em>Callable</em>) – activation function for the hidden layers</p></li>
+<li><p><strong>out_actn_encode</strong> (<em>Callable</em>) – activation function for the last layer of the encoder</p></li>
+<li><p><strong>out_actn_decode</strong> (<em>Callable</em>) – activation function for the last layer of the decoder</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="learner.models.ae.AutoEncoder.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/models/ae.html#AutoEncoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.models.ae.AutoEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="learner.models.ae.VAE">
+<em class="property">class </em><code class="sig-prename descclassname">learner.models.ae.</code><code class="sig-name descname">VAE</code><span class="sig-paren">(</span><em class="sig-param">in_dim</em>, <em class="sig-param">hidden_dims</em>, <em class="sig-param">actn: Callable = ReLU()</em>, <em class="sig-param">out_actn_encode=None</em>, <em class="sig-param">out_actn_decode=None</em>, <em class="sig-param">device='cpu'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/models/ae.html#VAE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.models.ae.VAE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Initializes internal Module state, shared by both nn.Module and ScriptModule.</p>
+<dl class="method">
+<dt id="learner.models.ae.VAE.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/models/ae.html#VAE.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.models.ae.VAE.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-learner.models.vision">
+<span id="module-models-vision"></span><h2>module: <cite>models.vision</cite><a class="headerlink" href="#module-learner.models.vision" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="learner.models.vision.LeNet5">
+<em class="property">class </em><code class="sig-prename descclassname">learner.models.vision.</code><code class="sig-name descname">LeNet5</code><a class="reference internal" href="_modules/learner/models/vision.html#LeNet5"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.models.vision.LeNet5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>LeNet 5 from LeCun Yann et al.</p>
+<p>LeCun, Yann, Léon Bottou, Yoshua Bengio, Patrick Haffner, and others.
+‘Gradient-Based Learning Applied to Document Recognition’.
+Proceedings of the IEEE 86, no. 11 (1998): 2278–2324.</p>
+<p>Input    - 1x28x28
+Conv     - 6x28x28  (5x5 kernel, padding 2) –&gt; ReLU
+Maxpool  - <a class="reference external" href="mailto:6&#37;&#52;&#48;14x14">6<span>&#64;</span>14x14</a>  (2x2 kernel, stride 2) Subsampling
+Conv     - <a class="reference external" href="mailto:16&#37;&#52;&#48;10x10">16<span>&#64;</span>10x10</a> (5x5 kernel) –&gt; ReLU
+Maxpool  - <a class="reference external" href="mailto:16&#37;&#52;&#48;5x5">16<span>&#64;</span>5x5</a>   (2x2 kernel, stride 2) Subsampling
+Conv     - <a class="reference external" href="mailto:120&#37;&#52;&#48;1x1">120<span>&#64;</span>1x1</a>  (5x5 kernel) –&gt; ReLU
+FC       - 84  –&gt; ReLU
+FC       - 10  (Output) –&gt; LogSoftmax</p>
+<p>Initializes internal Module state, shared by both nn.Module and ScriptModule.</p>
+<dl class="method">
+<dt id="learner.models.vision.LeNet5.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/learner/models/vision.html#LeNet5.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#learner.models.vision.LeNet5.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="tutorials/quick-start.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, yajiez
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>learner.device &mdash; learner 0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> learner
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basic Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Why this project?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html#happy-learning">Happy learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html#explore-this-package">Explore this package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/quick-start.html">Quick Start</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html"><cite>learner.base</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#module-learner.callbacks"><cite>learner.callbacks</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#module-learner.data"><cite>learner.data</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#module-learner.device"><cite>learner.device</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#module-learner.metrics"><cite>learner.metrics</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#module-learner.trainer"><cite>learner.trainer</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html#subpackage-models">Subpackage: <cite>models</cite></a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">learner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>learner.device</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for learner.device</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">psutil</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">utify</span> <span class="kn">import</span> <span class="n">approximate_size</span>
+
+
+<div class="viewcode-block" id="get_device"><a class="viewcode-back" href="../../modules.html#learner.device.get_device">[docs]</a><span class="k">def</span> <span class="nf">get_device</span><span class="p">(</span><span class="n">use_gpu</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">gpu_idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_str</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return `torch.device(&#39;cuda:idx&#39;)` if `use_gpu` and cuda is available else `torch.device(&#39;cpu&#39;)`</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        use_gpu (bool): if True, try to detect if GPU is available</span>
+<span class="sd">        gpu_idx (gpu_idx): if provided, must be a non-negative integer less than the number of GPUs</span>
+<span class="sd">        return_str (bool): if True, return a string of the device, otherwise return a `torch.device`</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        :py:class:`str` or :py:class:`torch.device`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">use_cuda</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="ow">and</span> <span class="n">use_gpu</span>
+    <span class="k">if</span> <span class="n">gpu_idx</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gpu_idx</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;gpu_idx must be an integer&quot;</span>
+        <span class="k">assert</span> <span class="n">gpu_idx</span> <span class="o">&lt;</span> <span class="n">get_gpu_count</span><span class="p">(),</span> <span class="s2">&quot;gpu_idx can&#39;t exceed the number of GPUs&quot;</span>
+    <span class="n">gpu</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;cuda:</span><span class="si">{gpu_idx}</span><span class="s1">&#39;</span> <span class="k">if</span> <span class="n">gpu_idx</span> <span class="k">else</span> <span class="s1">&#39;cuda&#39;</span>
+    <span class="n">device_str</span> <span class="o">=</span> <span class="n">gpu</span> <span class="k">if</span> <span class="n">use_cuda</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span>
+    <span class="k">return</span> <span class="n">device_str</span> <span class="k">if</span> <span class="n">return_str</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="n">device_str</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_memory_info"><a class="viewcode-back" href="../../modules.html#learner.device.get_memory_info">[docs]</a><span class="k">def</span> <span class="nf">get_memory_info</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return the memory usage information</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_total_memory"><a class="viewcode-back" href="../../modules.html#learner.device.get_total_memory">[docs]</a><span class="k">def</span> <span class="nf">get_total_memory</span><span class="p">(</span><span class="n">return_bytes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">human_readable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the total memory of current machine</span>
+
+<span class="sd">    Returns:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">total_memory</span> <span class="o">=</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">total</span>
+    <span class="k">if</span> <span class="n">echo</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">human_readable</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total memory:&#39;</span><span class="p">,</span> <span class="n">approximate_size</span><span class="p">(</span><span class="n">total_memory</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total memory (bytes):&#39;</span><span class="p">,</span> <span class="n">total_memory</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_bytes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">total_memory</span></div>
+
+
+<div class="viewcode-block" id="get_free_memory"><a class="viewcode-back" href="../../modules.html#learner.device.get_free_memory">[docs]</a><span class="k">def</span> <span class="nf">get_free_memory</span><span class="p">(</span><span class="n">return_bytes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">human_readable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the free memory of current machine</span>
+
+<span class="sd">    Returns:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">free_memory</span> <span class="o">=</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">free</span>
+    <span class="k">if</span> <span class="n">echo</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">human_readable</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;free memory:&#39;</span><span class="p">,</span> <span class="n">approximate_size</span><span class="p">(</span><span class="n">free_memory</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;free memory (bytes):&#39;</span><span class="p">,</span> <span class="n">free_memory</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_bytes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">free_memory</span></div>
+
+
+<div class="viewcode-block" id="get_available_memory"><a class="viewcode-back" href="../../modules.html#learner.device.get_available_memory">[docs]</a><span class="k">def</span> <span class="nf">get_available_memory</span><span class="p">(</span><span class="n">return_bytes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">human_readable</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the available memory of current machine</span>
+
+<span class="sd">    Returns:</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">available_memory</span> <span class="o">=</span> <span class="n">psutil</span><span class="o">.</span><span class="n">virtual_memory</span><span class="p">()</span><span class="o">.</span><span class="n">available</span>
+    <span class="k">if</span> <span class="n">echo</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">human_readable</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;available memory:&#39;</span><span class="p">,</span> <span class="n">approximate_size</span><span class="p">(</span><span class="n">available_memory</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;available memory (bytes):&#39;</span><span class="p">,</span> <span class="n">available_memory</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_bytes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">available_memory</span></div>
+
+
+<div class="viewcode-block" id="get_cpu_count"><a class="viewcode-back" href="../../modules.html#learner.device.get_cpu_count">[docs]</a><span class="k">def</span> <span class="nf">get_cpu_count</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return the number of available cpus</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s1">&#39;sched_getaffinity&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sched_getaffinity</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_gpu_count"><a class="viewcode-back" href="../../modules.html#learner.device.get_gpu_count">[docs]</a><span class="k">def</span> <span class="nf">get_gpu_count</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return the number of available cpus</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_gpu_info"><a class="viewcode-back" href="../../modules.html#learner.device.get_gpu_info">[docs]</a><span class="k">def</span> <span class="nf">get_gpu_info</span><span class="p">(</span><span class="n">return_info</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Show and optionally return the inforamtion of available GPUs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gpu_count</span> <span class="o">=</span> <span class="n">get_gpu_count</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">gpu_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No available GPUs.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">gpu_info</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">gpu_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">gpu_count</span><span class="p">):</span>
+            <span class="n">gpu_properties</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_properties</span><span class="p">(</span><span class="n">gpu_idx</span><span class="p">)</span>
+            <span class="n">gpu_info</span><span class="p">[</span><span class="n">gpu_idx</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span>                  <span class="n">gpu_properties</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="s1">&#39;major&#39;</span><span class="p">:</span>                 <span class="n">gpu_properties</span><span class="o">.</span><span class="n">major</span><span class="p">,</span>
+                <span class="s1">&#39;minor&#39;</span><span class="p">:</span>                 <span class="n">gpu_properties</span><span class="o">.</span><span class="n">minor</span><span class="p">,</span>
+                <span class="s1">&#39;total_mem&#39;</span><span class="p">:</span>             <span class="n">approximate_size</span><span class="p">(</span><span class="n">gpu_properties</span><span class="o">.</span><span class="n">total_memory</span><span class="p">),</span>
+                <span class="s1">&#39;multi_processor_count&#39;</span><span class="p">:</span> <span class="n">gpu_properties</span><span class="o">.</span><span class="n">multi_processor_count</span>
+            <span class="p">}</span>
+            <span class="n">str_info</span> <span class="o">=</span> <span class="s2">&quot;GPU </span><span class="si">{}</span><span class="s2">: </span><span class="si">{name}</span><span class="s2"> </span><span class="si">{major}</span><span class="s2">.</span><span class="si">{minor}</span><span class="s2"> [</span><span class="si">{total_mem}</span><span class="s2"> total memory, </span><span class="si">{multi_processor_count}</span><span class="s2"> processors]&quot;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">str_info</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gpu_idx</span><span class="p">,</span> <span class="o">**</span><span class="n">gpu_info</span><span class="p">[</span><span class="n">gpu_idx</span><span class="p">]))</span>
+
+        <span class="k">if</span> <span class="n">return_info</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">gpu_info</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, yajiez
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1078,7 +1078,7 @@ testing = ["pathlib2", "contextlib2", "unittest2"]
 doc = ["sphinx", "nbsphinx", "recommonmark", "sphinx_rtd_theme"]
 
 [metadata]
-content-hash = "0da132e1652331b2fe83b44c06b72629817865bac6c341b2bfb8376a077e1e29"
+content-hash = "4209b90270d28ab9c1a3077a3944ebfab87f0fa63dc4df5a7081bbb92b280474"
 python-versions = "^3.7"
 
 [metadata.files]
