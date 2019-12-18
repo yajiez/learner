@@ -1,7 +1,10 @@
-# coding=utf-8
-
-"""Just wrapper for Scikit-Learn to reduce the clutter
+"""Just a wrapper for Scikit-Learn to reduce the clutter
 """
+import warnings
+
+warnings.filterwarnings('ignore', category=FutureWarning)
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+
 from sklearn import __version__
 
 from sklearn import preprocessing

@@ -41,16 +41,16 @@ class AutoEncoder(nn.Module):
         self.out_actn_decode = out_actn_decode
 
     def encode(self, x):
-        for l in self.encoder[:-1]:
-            x = self.actn(l(x))
+        for layer in self.encoder[:-1]:
+            x = self.actn(layer(x))
         if self.out_actn_encode:
             return self.out_actn_encode(self.encoder[-1](x))
         else:
             return self.encoder[-1](x)
 
     def decode(self, z):
-        for l in self.decoder[:-1]:
-            z = self.actn(l(z))
+        for layer in self.decoder[:-1]:
+            z = self.actn(layer(z))
         if self.out_actn_decode:
             return self.out_actn_decode(self.decoder[-1](z))
         else:
@@ -97,8 +97,8 @@ class VAE(nn.Module):
         self.device = device
 
     def encode(self, x):
-        for l in self.encoder[:-1]:
-            x = self.actn(l(x))
+        for layer in self.encoder[:-1]:
+            x = self.actn(layer(x))
         mu = self.encoder_param_layers['mu'](x)
         logvar = self.encoder_param_layers['logvar'](x)
         if self.out_actn_encode:
@@ -111,8 +111,8 @@ class VAE(nn.Module):
         return torch.normal(mu, std, dtype=torch.float32, device=self.device, requires_grad=True)
 
     def decode(self, z):
-        for l in self.decoder[:-1]:
-            z = self.actn(l(z))
+        for layer in self.decoder[:-1]:
+            z = self.actn(layer(z))
         if self.out_actn_decode:
             return self.out_actn_decode(self.decoder[-1](z))
         else:

@@ -5,7 +5,8 @@ from pathlib import Path
 from torch.utils.data import random_split
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
-from torchvision.datasets import MNIST
+from torchvision.datasets import MNIST, EMNIST, FashionMNIST
+from torchvision.datasets import CIFAR10, CIFAR100
 
 logger = logging.getLogger(__name__)
 
@@ -164,6 +165,17 @@ class Data:
         assert datatype in self._datatypes, f"Support datatypes: {', '.join(self._datatypes)}"
         self._datatype = datatype
 
+    def show(self, n=5):
+        assert isinstance(n, int) and (0 < n < 33)
+        if self.datatype == 'image':
+            pass
+        elif self.datatype == 'text':
+            pass
+        elif self.datatype == 'tabular':
+            pass
+        else:
+            raise ValueError("You must set a valid datatype before calling this method.")
+
     def __repr__(self):
         train_size = len(self.train_ds)
         valid_size = len(self.valid_ds) if self.has_valid else 0
@@ -186,5 +198,37 @@ def load_mnist(root=None, transform=None, target_transform=None, download=True):
     root = root or Path("~/.learner/dataset").expanduser()
     train_ds = MNIST(root, train=True, download=download, transform=transform, target_transform=target_transform)
     test_ds = MNIST(root, train=False, download=download, transform=transform, target_transform=target_transform)
+    data = Data(train_ds, test_ds=test_ds, auto_split=True)
+    return data
+
+
+def load_emnist(split, root=None, transform=None, target_transform=None, download=True):
+    root = root or Path("~/.learner/dataset").expanduser()
+    train_ds = EMNIST(root=root, split=split, train=True, download=download, transform=transform, target_transform=target_transform)
+    test_ds = EMNIST(root=root, split=split, train=False, download=download, transform=transform, target_transform=target_transform)
+    data = Data(train_ds, test_ds=test_ds, auto_split=True)
+    return data
+
+
+def load_fmnist(root=None, transform=None, target_transform=None, download=True):
+    root = root or Path("~/.learner/dataset").expanduser()
+    train_ds = FashionMNIST(root, train=True, download=download, transform=transform, target_transform=target_transform)
+    test_ds = FashionMNIST(root, train=False, download=download, transform=transform, target_transform=target_transform)
+    data = Data(train_ds, test_ds=test_ds, auto_split=True)
+    return data
+
+
+def load_cifar10(root=None, transform=None, target_transform=None, download=True):
+    root = root or Path("~/.learner/dataset").expanduser()
+    train_ds = CIFAR10(root, train=True, download=download, transform=transform, target_transform=target_transform)
+    test_ds = CIFAR10(root, train=False, download=download, transform=transform, target_transform=target_transform)
+    data = Data(train_ds, test_ds=test_ds, auto_split=True)
+    return data
+
+
+def load_cifar100(root=None, transform=None, target_transform=None, download=True):
+    root = root or Path("~/.learner/dataset").expanduser()
+    train_ds = CIFAR100(root, train=True, download=download, transform=transform, target_transform=target_transform)
+    test_ds = CIFAR100(root, train=False, download=download, transform=transform, target_transform=target_transform)
     data = Data(train_ds, test_ds=test_ds, auto_split=True)
     return data

@@ -67,6 +67,12 @@ class BaseLearner:
     def partial_fit(self):
         pass
 
+    def validate(self):
+        pass
+
+    def predict(self):
+        pass
+
 
 class Learner(BaseLearner):
     """A typical Leaner with reasonable default settings"""
