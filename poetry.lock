@@ -1037,13 +1037,13 @@ description = "Utility Functions for Python"
 name = "utify"
 optional = false
 python-versions = ">=3.7,<4.0"
-version = "0.1.13"
+version = "0.2.0"
 
 [package.dependencies]
 fire = ">=0.2.1,<0.3.0"
 ipython = ">=7.10.2,<8.0.0"
 matplotlib = ">=3.1.2,<4.0.0"
-numpy = ">=1.16.1,<1.18.0"
+numpy = ">=1.16.1,<1.19.0"
 pandas = ">=0.25.3,<0.26.0"
 pillow = ">=6.2.1,<7.0.0"
 pyarrow = ">=0.15.1,<0.16.0"
@@ -1102,7 +1102,7 @@ testing = ["pathlib2", "contextlib2", "unittest2"]
 doc = ["sphinx", "nbsphinx", "recommonmark", "sphinx_rtd_theme"]
 
 [metadata]
-content-hash = "4209b90270d28ab9c1a3077a3944ebfab87f0fa63dc4df5a7081bbb92b280474"
+content-hash = "04996aa1a367eda43a11e7f48f3ea120f462152d6e1a9d3191acd031125247b8"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1755,8 +1755,8 @@ urllib3 = [
     {file = "urllib3-1.25.7.tar.gz", hash = "sha256:f3c5fd51747d450d4dcf6f923c81f78f811aab8205fda64b0aba34a4e48b0745"},
 ]
 utify = [
-    {file = "utify-0.1.13-py3-none-any.whl", hash = "sha256:75f4575305ee85cc617eb352cf17782366d3c72d1d47b303ca7167028fca89c8"},
-    {file = "utify-0.1.13.tar.gz", hash = "sha256:3e5f56bd3fed0a9059271f0247a9a7d1784ed2585373dafd24af76266597f6a4"},
+    {file = "utify-0.2.0-py3-none-any.whl", hash = "sha256:ec50218b4fd942cdeb51a0edacabe4c2b399dd8d4cf4025b4f1c93edc1daeeea"},
+    {file = "utify-0.2.0.tar.gz", hash = "sha256:482fe3665f64606a3978ebd418e364bf83d7412e8a4d57af3155efc45f7f9386"},
 ]
 wasabi = [
     {file = "wasabi-0.4.2-py3-none-any.whl", hash = "sha256:3e0897503a1357c9c913fc3647d0f4e440d89a3665ab201db273f85cabb83475"},
