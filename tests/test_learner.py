@@ -1,5 +1,3 @@
-from learner import __version__
+import learner
+from learner import sklearn
 
-
-def test_version():
-    assert __version__ == '0.1.0'
