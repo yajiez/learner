@@ -7,6 +7,7 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 from sklearn import __version__
 
+from sklearn import datasets
 from sklearn import preprocessing
 from sklearn import impute
 from sklearn import feature_extraction
@@ -28,6 +29,7 @@ from sklearn import metrics
 from sklearn import experimental
 
 
+from sklearn.datasets import *
 from sklearn.preprocessing import *
 from sklearn.impute import *
 from sklearn.feature_extraction import *

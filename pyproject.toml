@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "learner"
-version = "0.1.2"
+version = "0.1.3"
 description = "One learner to learn the world"
 authors = ["yajiez <yajiez.me@gmail.com>"]
 readme = "README.md"
